@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LumaTherapy Pro™ 4 | Commercial Red Light Therapy Panel | RedLight Systems</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cr:#c41230;--crd:#8b0000;--crg:#ff2244;--nb:#0d0d0d;--ch:#1c1c1c;--dk:#2a2a2a;--go:#c8972a;--gl:#e8b84b;--gp:#f5d98a;--ow:#faf8f5;--cm:#f3ede4;--sd:#e8dfd3;--tx:#1a1a1a;--tm:#555;--ts:#888;--bd:#ddd5c8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--tx);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* TOP BAR */
+.top-bar{background:var(--nb);color:#fff;text-align:center;padding:9px 20px;font-size:12px;font-weight:500;letter-spacing:.06em}
+.top-bar a{color:var(--gl);text-decoration:underline}
+
+/* HEADER */
+.site-header{background:#fff;border-bottom:1px solid var(--bd);padding:0 50px;position:sticky;top:0;z-index:200;box-shadow:0 1px 14px rgba(0,0,0,.07)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1440px;margin:0 auto}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--nb);letter-spacing:-.01em}
+.logo em{color:var(--cr);font-style:normal}
+.main-nav{display:flex;gap:24px;font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase}
+.main-nav a{color:var(--tm);transition:color .18s}
+.main-nav a:hover{color:var(--cr)}
+.hdr-btn{background:var(--cr);color:#fff;padding:8px 16px;border-radius:3px;font-size:11.5px;font-weight:700;letter-spacing:.06em}
+.hdr-btn:hover{background:var(--crd)}
+
+/* PROMO TICKER */
+.ticker{background:var(--ow);border-bottom:1px solid var(--bd);overflow:hidden;padding:11px 0}
+.ticker-in{display:flex;gap:60px;animation:tick 24s linear infinite;white-space:nowrap;width:max-content}
+.ticker-in span{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cr)}
+.ticker-in span::before{content:"✦ ";color:var(--go)}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* BREADCRUMB */
+.bc{padding:11px 50px;font-size:11.5px;color:var(--ts);border-bottom:1px solid var(--bd);max-width:1440px;margin:0 auto}
+.bc a{color:var(--ts)}
+.bc a:hover{color:var(--cr)}
+
+/* HERO BANNER TILES */
+.hero-tiles{background:var(--cm);border-bottom:1px solid var(--bd);padding:22px 50px}
+.tile-grid{display:grid;grid-template-columns:repeat(5,1fr);max-width:1440px;margin:0 auto;border:1px solid var(--bd);border-radius:4px;overflow:hidden;background:#fff}
+.tile{padding:18px 14px;text-align:center;border-right:1px solid var(--bd)}
+.tile:last-child{border-right:none}
+.tile:hover{background:var(--ow)}
+.tile .ico{font-size:26px;margin-bottom:8px}
+.tile h4{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--nb);line-height:1.45}
+
+/* PRODUCT ZONE */
+.pz{max-width:1440px;margin:0 auto;padding:36px 50px 50px;display:grid;grid-template-columns:54% 46%;gap:54px;align-items:start}
+
+/* GALLERY */
+.gal{position:sticky;top:72px}
+.gal-logo{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:var(--nb);margin-bottom:14px;letter-spacing:-.01em}
+.gal-logo em{color:var(--cr);font-style:normal}
+.main-img{position:relative;border-radius:6px;overflow:hidden;background:var(--cm);border:1px solid var(--bd);aspect-ratio:1/.82;display:flex;align-items:center;justify-content:center}
+.badge{position:absolute;top:16px;left:16px;background:var(--cr);color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:2px;z-index:2}
+.save-tag{position:absolute;top:16px;right:16px;background:var(--nb);color:var(--gl);font-size:11px;font-weight:700;padding:6px 12px;border-radius:2px;z-index:2}
+.panel-vis{width:100%;height:100%;min-height:400px;background:radial-gradient(ellipse at 60% 40%,#200004 0%,#100002 60%,#060001 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.panel-vis::before{content:'';position:absolute;width:320px;height:320px;background:radial-gradient(circle,rgba(196,18,48,.5) 0%,rgba(196,18,48,.07) 55%,transparent 75%);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+.panel-vis svg{position:relative;z-index:1;filter:drop-shadow(0 0 26px rgba(255,30,60,.7))}
+.img-note{margin-top:9px;background:rgba(196,18,48,.06);border:1px dashed rgba(196,18,48,.28);border-radius:4px;padding:9px 14px;font-size:11px;color:var(--cr);font-style:italic;text-align:center}
+.thumbs{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.thumb{width:70px;height:70px;border-radius:4px;border:2px solid var(--bd);cursor:pointer;transition:border-color .18s;background:var(--ow);display:flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;text-align:center;color:var(--ts);padding:4px;line-height:1.3}
+.thumb.on,.thumb:hover{border-color:var(--cr)}
+.thumb.dk{background:linear-gradient(135deg,#1a0005,#350010);color:rgba(255,100,120,.65)}
+.craft-strip{margin-top:18px;background:var(--nb);color:#fff;border-radius:4px;padding:14px 20px;display:flex;align-items:center;gap:12px}
+.craft-strip p{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;line-height:1.5}
+.craft-strip span{color:var(--gl)}
+
+/* PURCHASE PANEL */
+.pname{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:700;color:var(--nb);line-height:1.1;margin-bottom:6px}
+.pname sup{font-size:22px;vertical-align:super}
+.pline{font-size:12px;color:var(--ts);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.stars-row{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--bd)}
+.stars{color:var(--go);font-size:17px;letter-spacing:2px}
+.rlink{font-size:12.5px;color:var(--ts);border-bottom:1px solid var(--ts);cursor:pointer}
+
+/* PRICE BOX */
+.pbox{background:var(--ow);border:1px solid var(--bd);border-radius:6px;padding:22px 22px 18px;margin-bottom:20px}
+.rl{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.rl-lbl{font-size:11px;color:var(--ts);text-transform:uppercase;letter-spacing:.07em}
+.rl-amt{font-size:14px;color:var(--ts);text-decoration:line-through}
+.off{background:var(--cr);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
+.sl{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.sl-lbl{font-size:11px;color:var(--ts);text-transform:uppercase;letter-spacing:.07em}
+.sl-amt{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:700;color:var(--nb);line-height:1}
+.sl-amt sup{font-size:22px;font-family:'DM Sans',sans-serif;vertical-align:super;font-weight:600}
+.save{font-size:13px;color:var(--cr);font-weight:600;margin-bottom:14px}
+.fin{font-size:12px;color:var(--tm);padding-top:14px;border-top:1px solid var(--bd)}
+.fin strong{color:var(--nb)}
+.fin a{color:var(--cr);font-weight:600;text-decoration:underline}
+
+/* COUNTDOWN */
+.cd{background:var(--nb);color:#fff;border-radius:5px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cd-lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gl)}
+.cd-sub{font-size:9.5px;color:rgba(255,255,255,.35);margin-top:3px}
+.cd-units{display:flex;gap:8px;flex-shrink:0}
+.cd-box{text-align:center}
+.cd-num{background:var(--cr);color:#fff;font-size:22px;font-weight:700;width:46px;height:46px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif}
+.cd-u{font-size:8px;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.4);margin-top:3px}
+
+/* BOUGHT */
+.bought{display:flex;align-items:center;gap:10px;margin-bottom:16px;font-size:12px;font-weight:600;color:var(--tm)}
+.dot{width:8px;height:8px;background:#22c55e;border-radius:50%;flex-shrink:0;box-shadow:0 0 6px rgba(34,197,94,.5)}
+
+/* BUTTONS */
+.btn-buy{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:18px;background:var(--cr);color:#fff;border:none;border-radius:4px;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .18s;margin-bottom:10px}
+.btn-buy:hover{background:var(--crd)}
+.btn-call{display:flex;align-items:center;justify-content:center;width:100%;padding:15px;border:2px solid var(--nb);background:#fff;color:var(--nb);border-radius:4px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .18s;margin-bottom:20px}
+.btn-call:hover{background:var(--nb);color:#fff}
+
+/* TRUST GRID */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+.tc{border:1px solid var(--bd);border-radius:5px;padding:12px 10px;text-align:center}
+.tc .ti{font-size:22px;margin-bottom:5px}
+.tc p{font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--tm);line-height:1.45}
+
+/* INFO BOXES */
+.ib{border:1px solid var(--bd);border-radius:5px;overflow:hidden;margin-bottom:12px}
+.ib-h{background:var(--ow);padding:12px 18px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);border-bottom:1px solid var(--bd)}
+.ib-b{padding:14px 18px;font-size:13px;line-height:1.75;color:var(--tm)}
+.ib-b strong{color:var(--nb)}
+
+/* GIFT BANNER */
+.gift{background:linear-gradient(90deg,var(--nb),#1f0800);color:#fff;border-radius:5px;padding:16px 20px;display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.gi{font-size:30px;flex-shrink:0}
+.gt p{font-size:12px;line-height:1.65}
+.gt strong{color:var(--gl);font-size:13px;display:block;margin-bottom:2px}
+
+/* HANDCRAFTED HEADLINE */
+.sec-hl{background:var(--nb);color:#fff;text-align:center;padding:28px 20px}
+.sec-hl h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.sec-hl p{font-size:12px;color:rgba(255,255,255,.55);margin-top:6px}
+
+/* 3-UP BENEFITS ROW */
+.brow{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.bblock{padding:40px 28px;text-align:center;border-right:1px solid var(--bd)}
+.bblock:last-child{border-right:none}
+.bico{width:80px;height:80px;border-radius:50%;background:var(--ow);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 14px}
+.bblock h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--nb);margin-bottom:8px}
+.bblock p{font-size:13px;color:var(--tm);line-height:1.78}
+
+/* FEATURE SPLIT */
+.fs{max-width:1440px;margin:0 auto;padding:64px 50px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.fs.flip{direction:rtl}
+.fs.flip>*{direction:ltr}
+.fi{border-radius:8px;overflow:hidden;border:1px solid var(--bd);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative}
+.fi-dk{background:radial-gradient(ellipse at center,#250008,#0d0002)}
+.fi-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(196,18,48,.18),transparent 65%)}
+.fp{position:relative;z-index:1;text-align:center;color:rgba(255,255,255,.3);padding:22px;font-style:italic;font-size:11.5px}
+.fp .fpi{font-size:46px;display:block;margin-bottom:10px}
+.ft-tag{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cr);margin-bottom:10px;display:block}
+.ft h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:var(--nb);line-height:1.25;margin-bottom:16px}
+.ft p{font-size:14px;color:var(--tm);line-height:1.9;margin-bottom:14px}
+.ft h4{font-size:13px;font-weight:700;color:var(--nb);margin:18px 0 8px}
+.cl{list-style:none;padding:0;margin-top:14px}
+.cl li{font-size:13.5px;color:var(--tm);padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--bd);line-height:1.5}
+.cl li:last-child{border-bottom:none}
+.cl li::before{content:'✓';position:absolute;left:0;color:var(--cr);font-weight:700}
+
+/* SPECS */
+.spec-wrap{background:var(--ow);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:64px 50px}
+.spec-in{max-width:1340px;margin:0 auto}
+.sec-hd{text-align:center;margin-bottom:44px}
+.sec-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cr);margin-bottom:10px}
+.sec-ttl{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--nb);line-height:1.2;margin-bottom:14px}
+.sec-sub{font-size:15px;color:var(--ts);max-width:640px;margin:0 auto;line-height:1.8}
+.tw{overflow-x:auto}
+table.sp{width:100%;border-collapse:collapse;font-size:13px}
+table.sp thead th{background:var(--nb);color:#fff;padding:14px 16px;text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+table.sp thead th.h{background:var(--cr)}
+table.sp td{padding:12px 16px;border-bottom:1px solid var(--bd);color:var(--tm);background:#fff}
+table.sp tr:nth-child(even) td{background:var(--ow)}
+table.sp td.h{background:rgba(196,18,48,.05);font-weight:700;color:var(--nb)}
+table.sp tr:nth-child(even) td.h{background:rgba(196,18,48,.1)}
+table.sp td.lb{font-weight:600;color:var(--nb)}
+table.sp .ck{color:var(--cr);font-size:17px;font-weight:700}
+.cr-row td{text-align:center;padding:16px;background:#fff !important}
+.cr-row td.h{background:rgba(196,18,48,.05) !important}
+.tb{background:var(--ch);color:#fff;padding:10px 20px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;display:inline-block}
+.tb.h{background:var(--cr)}
+
+/* STORY BAND */
+.story{background:var(--nb);color:#fff;padding:80px 50px;position:relative;overflow:hidden}
+.story::after{content:'';position:absolute;right:-120px;top:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(196,18,48,.14),transparent 70%);pointer-events:none}
+.st-in{max-width:1340px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.st-tx h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;line-height:1.2;margin-bottom:22px}
+.st-tx h2 em{color:var(--gl);font-style:normal}
+.st-tx p{font-size:14px;line-height:1.95;color:rgba(255,255,255,.72);margin-bottom:16px}
+.st-img{border-radius:8px;border:1px solid rgba(255,255,255,.08);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.03);position:relative;overflow:hidden}
+.st-img::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(196,18,48,.22),transparent 68%)}
+.st-img-t{position:relative;z-index:1;text-align:center;color:rgba(255,255,255,.35);font-size:12px;font-style:italic}
+.st-img-t .si{font-size:44px;display:block;margin-bottom:8px}
+
+/* BREAKTHROUGH FEATURES */
+.bt-wrap{padding:70px 50px;max-width:1440px;margin:0 auto}
+.bt-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:42px}
+.btc{text-align:center;border:1px solid var(--bd);border-radius:6px;padding:24px 14px;transition:border-color .2s,box-shadow .2s}
+.btc:hover{border-color:var(--cr);box-shadow:0 6px 24px rgba(196,18,48,.09)}
+.btc .bti{font-size:34px;margin-bottom:12px}
+.btc h4{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--nb);line-height:1.45}
+
+/* TECH SECTIONS */
+.tech{max-width:1440px;margin:0 auto;padding:0 50px 60px}
+.tech h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--nb);margin-bottom:16px;padding-top:48px;border-top:1px solid var(--bd)}
+.tech p{font-size:14px;color:var(--tm);line-height:1.9;margin-bottom:14px}
+.tech h3{font-size:17px;font-weight:700;color:var(--nb);margin:28px 0 10px}
+.ph{max-width:650px;height:250px;background:var(--ow);border:1px solid var(--bd);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-style:italic;color:var(--ts);text-align:center;padding:20px;margin:24px 0}
+
+/* COMPARISON STRIP */
+.comp-strip{background:var(--cm);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:50px}
+.comp-in{max-width:1340px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.comp-v{background:#fff;border:1px solid var(--bd);border-radius:6px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-style:italic;font-size:12px;color:var(--ts);padding:20px;text-align:center}
+.comp-t h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--nb);margin-bottom:14px}
+.comp-t p{font-size:13.5px;color:var(--tm);line-height:1.85}
+
+/* ZERO SECTION */
+.zero{padding:64px 50px;max-width:1440px;margin:0 auto}
+.zero-in{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.zt h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--nb);margin-bottom:18px}
+.zt p{font-size:14px;color:var(--tm);line-height:1.9;margin-bottom:14px}
+.zv{background:var(--ow);border:1px solid var(--bd);border-radius:8px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-style:italic;font-size:12px;color:var(--ts);padding:20px;text-align:center}
+
+/* STATS */
+.stats{background:var(--nb);padding:54px 50px}
+.stats-in{max-width:1340px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.scard{text-align:center;border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:28px 16px}
+.snum{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:700;color:var(--cr);line-height:1;margin-bottom:8px}
+.slbl{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.6);line-height:1.55}
+
+/* REVIEWS */
+.rev-sec{padding:70px 50px;max-width:1440px;margin:0 auto}
+.rev-top{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:center;background:var(--ow);border:1px solid var(--bd);border-radius:8px;padding:36px;margin-bottom:42px}
+.ag-num{font-family:'Cormorant Garamond',serif;font-size:70px;font-weight:700;color:var(--nb);line-height:1;text-align:center}
+.ag-stars{color:var(--go);font-size:22px;text-align:center;margin:6px 0}
+.ag-cnt{font-size:11.5px;color:var(--ts);text-align:center}
+.br{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.br-l{font-size:12px;width:34px;text-align:right;color:var(--tm)}
+.br-bg{flex:1;height:8px;background:var(--bd);border-radius:4px;overflow:hidden}
+.br-f{height:100%;background:var(--go);border-radius:4px}
+.br-p{font-size:11.5px;color:var(--ts);width:30px}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rc{border:1px solid var(--bd);border-radius:7px;padding:24px}
+.rch{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.rn{font-weight:700;font-size:14px;color:var(--nb)}
+.rs{color:var(--go);font-size:13px}
+.rd{font-size:11px;color:var(--ts);margin-top:2px}
+.rv{font-size:10.5px;color:#16a34a;font-weight:600;margin-top:3px}
+.rt{font-weight:700;font-size:14px;color:var(--nb);margin-bottom:8px}
+.rb{font-size:13.5px;color:var(--tm);line-height:1.8}
+
+/* FAQ */
+.faq{padding:70px 50px;max-width:1440px;margin:0 auto}
+.faq-i{border-bottom:1px solid var(--bd)}
+.faq-q{padding:20px 0;font-size:15px;font-weight:600;color:var(--nb);display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;line-height:1.5}
+.faq-q::after{content:'＋';font-size:20px;font-weight:300;color:var(--cr);flex-shrink:0}
+.faq-a{padding:0 0 20px;font-size:13.5px;color:var(--tm);line-height:1.9}
+
+/* FOOTER CTA */
+.fcta{background:var(--nb);color:#fff;text-align:center;padding:80px 50px;position:relative;overflow:hidden}
+.fcta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(196,18,48,.13),transparent 70%);pointer-events:none}
+.fcta h2{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;margin-bottom:18px;position:relative}
+.fcta h2 em{color:var(--gl);font-style:normal}
+.fcta .fp{font-size:15px;color:rgba(255,255,255,.65);max-width:580px;margin:0 auto 36px;line-height:1.85;position:relative}
+.fcta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.fcta-p{background:var(--cr);color:#fff;padding:18px 44px;border-radius:4px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;transition:background .18s}
+.fcta-p:hover{background:var(--crd)}
+.fcta-s{border:2px solid rgba(255,255,255,.25);background:transparent;color:#fff;padding:16px 44px;border-radius:4px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.fcta-fine{font-size:11px;color:rgba(255,255,255,.25);margin-top:26px;position:relative}
+
+/* SITE FOOTER */
+.sfoot{background:var(--ch);border-top:1px solid rgba(255,255,255,.06);padding:36px 50px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.sf-logo{font-family:'Cormorant Garamond',serif;font-size:19px;color:rgba(255,255,255,.75)}
+.sf-logo em{color:var(--gl);font-style:normal}
+.sf-lks{display:flex;gap:22px;flex-wrap:wrap}
+.sf-lks a{font-size:11.5px;color:rgba(255,255,255,.4);transition:color .18s}
+.sf-lks a:hover{color:var(--gl)}
+.sf-c{font-size:11.5px;color:rgba(255,255,255,.3)}
+
+@media(max-width:1100px){
+  .pz{grid-template-columns:1fr;padding:24px}
+  .gal{position:static}
+  .tile-grid{grid-template-columns:repeat(3,1fr)}
+  .tile:nth-child(4),.tile:nth-child(5){display:none}
+  .fs,.st-in,.comp-in,.zero-in{grid-template-columns:1fr;gap:36px}
+  .fs.flip{direction:ltr}
+  .bt-grid{grid-template-columns:repeat(3,1fr)}
+  .stats-in,.rg{grid-template-columns:1fr 1fr}
+  .rev-top{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .site-header{padding:0 18px}
+  .main-nav{display:none}
+  .pz,.fs,.spec-wrap,.bt-wrap,.rev-sec,.faq,.story,.stats,.comp-strip,.zero,.tech{padding-left:18px;padding-right:18px}
+  .hero-tiles{padding:14px 18px}
+  .brow{grid-template-columns:1fr}
+  .bblock{border-right:none;border-bottom:1px solid var(--bd)}
+  .bt-grid,.stats-in,.rg{grid-template-columns:1fr}
+  .fcta{padding:50px 18px}
+  .sfoot{flex-direction:column;text-align:center;padding:28px 18px}
+  .bc{padding:11px 18px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">The ONLY commercial red light therapy system engineered with photobiology researchers. &nbsp; Sales: <a href="tel:18008001234"><strong>(800) 800-1234</strong></a> &nbsp;|&nbsp; Support: <a href="tel:18009001234"><strong>(800) 900-1234</strong></a></div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="hdr-in">
+    <div class="logo">LumaTherapy <em>Pro™</em></div>
+    <nav class="main-nav">
+      <a href="#">Home</a><a href="#">Commercial</a><a href="#">Clinical</a><a href="#">Financing</a><a href="#">Research</a><a href="#">Our Story</a><a href="#">Reviews</a><a href="#">Contact Us</a>
+    </nav>
+    <a href="tel:18008001234" class="hdr-btn">📞 (800) 800-1234</a>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-in">
+    <span>Over 40% Off — Limited Time</span><span>Free Motorized Stand Included</span><span>Ships in 3–5 Business Days</span><span>Clinician Recommended</span><span>3-Year Commercial Warranty</span><span>0% APR Financing</span><span>Over 2,000 Units Sold</span>
+    <span>Over 40% Off — Limited Time</span><span>Free Motorized Stand Included</span><span>Ships in 3–5 Business Days</span><span>Clinician Recommended</span><span>3-Year Commercial Warranty</span><span>0% APR Financing</span><span>Over 2,000 Units Sold</span>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div style="border-bottom:1px solid var(--bd)">
+  <div class="bc"><a href="#">Home</a> &rsaquo; <a href="#">Commercial Red Light Therapy</a> &rsaquo; LumaTherapy Pro™ 4</div>
+</div>
+
+<!-- HERO TILES -->
+<div class="hero-tiles">
+  <div class="tile-grid">
+    <div class="tile"><div class="ico">🩺</div><h4>The Only Panel Engineered by Photobiology Researchers</h4></div>
+    <div class="tile"><div class="ico">💰</div><h4>More than 40% OFF — Early Bird Special</h4></div>
+    <div class="tile"><div class="ico">🏆</div><h4>The Earlier You Buy, The More You Save</h4></div>
+    <div class="tile"><div class="ico">📞</div><h4>Open 7 Days a Week — Call (800) 800-1234</h4></div>
+    <div class="tile"><div class="ico">⚡</div><h4>Don't Wait — Limited Inventory Available</h4></div>
+  </div>
+</div>
+
+<!-- PRODUCT ZONE -->
+<div class="pz">
+
+  <!-- GALLERY -->
+  <div class="gal">
+    <div class="gal-logo">LumaTherapy<em> Pro™</em></div>
+    <div class="main-img">
+      <div class="badge">COMMERCIAL GRADE</div>
+      <div class="save-tag">SAVE 42%</div>
+      <div class="panel-vis">
+        <svg width="168" height="208" viewBox="0 0 168 208" fill="none">
+          <rect x="16" y="6" width="136" height="196" rx="8" fill="#1a0004" stroke="rgba(255,40,70,0.35)" stroke-width="1.5"/>
+          <rect x="26" y="16" width="116" height="176" rx="4" fill="#0e0002"/>
+          <circle cx="40" cy="32" r="4.5" fill="#ff2244" opacity=".95"/><circle cx="58" cy="32" r="4.5" fill="#cc1030" opacity=".85"/><circle cx="76" cy="32" r="4.5" fill="#ff2244" opacity=".95"/><circle cx="94" cy="32" r="4.5" fill="#8b0000" opacity=".7"/><circle cx="112" cy="32" r="4.5" fill="#ff2244" opacity=".95"/><circle cx="130" cy="32" r="4.5" fill="#cc1030" opacity=".85"/>
+          <circle cx="40" cy="52" r="4.5" fill="#cc1030"/><circle cx="58" cy="52" r="4.5" fill="#ff2244"/><circle cx="76" cy="52" r="4.5" fill="#8b0000" opacity=".7"/><circle cx="94" cy="52" r="4.5" fill="#ff2244"/><circle cx="112" cy="52" r="4.5" fill="#cc1030"/><circle cx="130" cy="52" r="4.5" fill="#ff2244"/>
+          <circle cx="40" cy="72" r="4.5" fill="#ff2244"/><circle cx="58" cy="72" r="4.5" fill="#8b0000" opacity=".7"/><circle cx="76" cy="72" r="4.5" fill="#ff2244"/><circle cx="94" cy="72" r="4.5" fill="#cc1030"/><circle cx="112" cy="72" r="4.5" fill="#ff2244"/><circle cx="130" cy="72" r="4.5" fill="#cc1030"/>
+          <circle cx="40" cy="92" r="4.5" fill="#cc1030"/><circle cx="58" cy="92" r="4.5" fill="#ff2244"/><circle cx="76" cy="92" r="4.5" fill="#cc1030"/><circle cx="94" cy="92" r="4.5" fill="#ff2244"/><circle cx="112" cy="92" r="4.5" fill="#8b0000" opacity=".7"/><circle cx="130" cy="92" r="4.5" fill="#ff2244"/>
+          <circle cx="40" cy="112" r="4.5" fill="#ff2244"/><circle cx="58" cy="112" r="4.5" fill="#cc1030"/><circle cx="76" cy="112" r="4.5" fill="#ff2244"/><circle cx="94" cy="112" r="4.5" fill="#8b0000" opacity=".7"/><circle cx="112" cy="112" r="4.5" fill="#ff2244"/><circle cx="130" cy="112" r="4.5" fill="#cc1030"/>
+          <circle cx="40" cy="132" r="4.5" fill="#cc1030"/><circle cx="58" cy="132" r="4.5" fill="#ff2244"/><circle cx="76" cy="132" r="4.5" fill="#cc1030"/><circle cx="94" cy="132" r="4.5" fill="#ff2244"/><circle cx="112" cy="132" r="4.5" fill="#ff2244"/><circle cx="130" cy="132" r="4.5" fill="#8b0000" opacity=".7"/>
+          <circle cx="40" cy="152" r="4.5" fill="#ff2244"/><circle cx="58" cy="152" r="4.5" fill="#8b0000" opacity=".7"/><circle cx="76" cy="152" r="4.5" fill="#ff2244"/><circle cx="94" cy="152" r="4.5" fill="#cc1030"/><circle cx="112" cy="152" r="4.5" fill="#ff2244"/><circle cx="130" cy="152" r="4.5" fill="#ff2244"/>
+          <circle cx="40" cy="172" r="4.5" fill="#cc1030"/><circle cx="58" cy="172" r="4.5" fill="#ff2244"/><circle cx="76" cy="172" r="4.5" fill="#8b0000" opacity=".7"/><circle cx="94" cy="172" r="4.5" fill="#ff2244"/><circle cx="112" cy="172" r="4.5" fill="#cc1030"/><circle cx="130" cy="172" r="4.5" fill="#ff2244"/>
+          <ellipse cx="84" cy="104" rx="58" ry="80" fill="rgba(255,30,60,0.06)"/>
+        </svg>
+      </div>
+    </div>
+    <p class="img-note">📸 Insert 8–10 high-resolution product photos. Dev: wire to Shopify image slideshow + thumbnail carousel.</p>
+    <div class="thumbs">
+      <div class="thumb dk on">Front View</div>
+      <div class="thumb lt">Side View</div>
+      <div class="thumb dk">LED Detail</div>
+      <div class="thumb lt">Controls</div>
+      <div class="thumb dk">Panel On</div>
+      <div class="thumb lt">With Stand</div>
+      <div class="thumb dk">In Use</div>
+      <div class="thumb lt">Lifestyle</div>
+    </div>
+    <div class="craft-strip">
+      <span style="font-size:22px">🔴</span>
+      <p>ENGINEERED FROM SCRATCH &nbsp;·&nbsp; <span>Developed with Clinical Researchers</span></p>
+    </div>
+  </div>
+
+  <!-- PURCHASE PANEL -->
+  <div>
+    <div class="pname">LumaTherapy Pro™<sup> 4</sup></div>
+    <div class="pline">Commercial Red Light &amp; Near-Infrared Therapy Panel</div>
+    <div class="stars-row">
+      <div class="stars">★★★★★</div>
+      <a href="#reviews" class="rlink">487 Reviews</a>
+    </div>
+
+    <div class="pbox">
+      <div class="rl"><span class="rl-lbl">Retail</span><span class="rl-amt">$8,999</span><span class="off">42% OFF</span></div>
+      <div style="font-size:11px;color:var(--ts);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px">Discount</div>
+      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
+        <span style="font-size:11px;color:var(--ts);text-transform:uppercase;letter-spacing:.07em">Sale price</span>
+        <span class="sl-amt"><sup>$</sup>5,199</span>
+      </div>
+      <div class="save">You Save $3,800</div>
+      <div class="fin">or as low as <strong>$144/month</strong> with 0% APR financing — <a href="#financing">Apply in 30 Seconds</a></div>
+    </div>
+
+    <div class="cd">
+      <div>
+        <div class="cd-lbl">⚡ Price Increase In:</div>
+        <div class="cd-sub">Lock in your savings now</div>
+      </div>
+      <div class="cd-units">
+        <div class="cd-box"><div class="cd-num" id="d">02</div><div class="cd-u">Days</div></div>
+        <div class="cd-box"><div class="cd-num" id="h">14</div><div class="cd-u">Hrs</div></div>
+        <div class="cd-box"><div class="cd-num" id="m">37</div><div class="cd-u">Min</div></div>
+        <div class="cd-box"><div class="cd-num" id="s">22</div><div class="cd-u">Sec</div></div>
+      </div>
+    </div>
+
+    <div class="bought"><span class="dot"></span><span><strong>Over 2,000 Bought.</strong> Limited inventory — order while stock lasts.</span></div>
+
+    <button class="btn-buy">🛒 Buy Now — Free Shipping Included</button>
+    <button class="btn-call">📞 Call to Order: (800) 800-1234</button>
+
+    <div class="tgrid">
+      <div class="tc"><div class="ti">🔬</div><p>Clinically Researched</p></div>
+      <div class="tc"><div class="ti">🛡️</div><p>3-Year Commercial Warranty</p></div>
+      <div class="tc"><div class="ti">🚚</div><p>Free Expedited Shipping</p></div>
+      <div class="tc"><div class="ti">💳</div><p>0% APR Financing</p></div>
+      <div class="tc"><div class="ti">↩️</div><p>60-Day Returns</p></div>
+      <div class="tc"><div class="ti">🏆</div><p>Award-Winning Design</p></div>
+    </div>
+
+    <div class="ib">
+      <div class="ib-h">In a Nutshell</div>
+      <div class="ib-b"><strong>Research-Based.</strong> The LumaTherapy Pro™ 4 is the ONLY commercial red light therapy panel engineered in partnership with photobiology researchers. Built to accelerate muscle recovery, rejuvenate skin, reduce chronic inflammation, boost cellular energy production, and improve sleep — all in sessions as short as 10 minutes.</div>
+    </div>
+
+    <div class="ib">
+      <div class="ib-h">Fine Print</div>
+      <div class="ib-b"><strong>Limit 2 per customer.</strong> Limited quantities available. Any orders exceeding 2 units will be reviewed — call <strong>(800) 800-1234</strong> for bulk pricing. The current price is heavily discounted for the promotional period. Every 2 weeks the price will increase as inventory is allocated. Purchase now while pricing is still at its lowest.</div>
+    </div>
+
+    <div class="ib">
+      <div class="ib-h">Warranty</div>
+      <div class="ib-b">All LumaTherapy Pro™ panels come with a <strong>3-Year Commercial Warranty included FREE.</strong> Covers manufacturing defects, LED panel failure, touchscreen malfunctions, and structural problems — at zero additional cost. Call <strong>(800) 900-1234</strong> for warranty service, 7 days a week.</div>
+    </div>
+
+    <div class="gift">
+      <div class="gi">🎁</div>
+      <div class="gt">
+        <p><strong>FREE Motorized Height-Adjustable Stand ($399 Value)</strong>Order before the end of the <strong style="color:var(--gl)">Spring Launch Special</strong> and receive a premium commercial stand — absolutely free with your LumaTherapy Pro™ 4.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HANDCRAFTED HEADLINE -->
+<div class="sec-hl">
+  <h2>Engineered From Scratch</h2>
+  <p>Developed from the ground up with clinical researchers — not adapted from consumer technology</p>
+</div>
+
+<!-- 3-UP BENEFITS ROW -->
+<div class="brow">
+  <div class="bblock">
+    <div class="bico">🧬</div>
+    <p class="img-note" style="font-size:10px;margin-bottom:14px;max-width:280px;margin-left:auto;margin-right:auto">📸 Insert: Cellular / mitochondria / ATP diagram graphic</p>
+    <h3>Cellular Energy Activation</h3>
+    <p>660nm and 850nm wavelengths penetrate deep into tissue, activating cytochrome c oxidase in the mitochondria and driving a clinically significant surge in ATP energy production — the fundamental driver of every cellular repair and regeneration process in the body.</p>
+  </div>
+  <div class="bblock">
+    <div class="bico">💪</div>
+    <p class="img-note" style="font-size:10px;margin-bottom:14px;max-width:280px;margin-left:auto;margin-right:auto">📸 Insert: Athlete recovery or sports therapy photo</p>
+    <h3>Accelerated Recovery System™</h3>
+    <p>Near-infrared light at 810nm and 850nm penetrates deep muscle tissue to reduce inflammation, clear metabolic waste, and accelerate repair. Professional athletes and physical therapists trust LumaTherapy Pro™ 4 because the recovery results are consistently, measurably faster.</p>
+  </div>
+  <div class="bblock">
+    <div class="bico">✨</div>
+    <p class="img-note" style="font-size:10px;margin-bottom:14px;max-width:280px;margin-left:auto;margin-right:auto">📸 Insert: Skin rejuvenation / before-after / treatment photo</p>
+    <h3>Skin Rejuvenation System™</h3>
+    <p>The 630nm and 660nm red light spectrum targets fibroblasts in the dermis to stimulate collagen synthesis, improve skin tone and texture, reduce fine lines, and accelerate wound healing — delivering clinical results that previously required expensive invasive procedures.</p>
+  </div>
+</div>
+
+<!-- SPECS TABLE -->
+<div class="spec-wrap">
+  <div class="spec-in">
+    <div class="sec-hd">
+      <div class="sec-tag">Product Specifications</div>
+      <h2 class="sec-ttl">Compare the LumaTherapy Pro™ Series</h2>
+      <p class="sec-sub">From targeted spot treatment to full commercial room coverage — choose the panel that fits your environment and goals.</p>
+    </div>
+    <div class="tw">
+      <table class="sp">
+        <thead>
+          <tr><th></th><th><a href="#">LumaTherapy 200</a></th><th class="h">LumaTherapy Pro™ 4</th><th><a href="#">LumaTherapy Pro™ 6</a></th><th><a href="#">LumaTherapy Ultra™</a></th></tr>
+        </thead>
+        <tbody>
+          <tr class="cr-row"><td></td><td><a href="#" class="tb">Buy Now</a></td><td class="h"><a href="#" class="tb h">Buy Now</a></td><td><a href="#" class="tb">Buy Now</a></td><td><a href="#" class="tb">Buy Now</a></td></tr>
+          <tr><td class="lb">Model:</td><td>LumaTherapy 200</td><td class="h"><strong>LumaTherapy Pro™ 4</strong></td><td>LumaTherapy Pro™ 6</td><td>LumaTherapy Ultra™</td></tr>
+          <tr><td class="lb">Ideal Use</td><td>Personal / Home</td><td class="h"><strong>Commercial / Clinical</strong></td><td>Med-Spa / Studio</td><td>Hospital / Athletic Ctr</td></tr>
+          <tr><td class="lb">Total LED Count</td><td>200 LEDs</td><td class="h"><strong>400 LEDs</strong></td><td>600 LEDs</td><td>1,200 LEDs</td></tr>
+          <tr><td class="lb">Wavelengths with Clinical-Grade Output</td><td>2 Wavelengths</td><td class="h"><strong>5 Wavelengths — 100X More Therapeutic Coverage</strong></td><td>5 Wavelengths</td><td>5 Wavelengths</td></tr>
+          <tr><td class="lb">Specific Wavelengths</td><td>660nm, 850nm</td><td class="h"><strong>630, 660, 810, 830, 850nm</strong></td><td>630, 660, 810, 830, 850nm</td><td>630, 660, 810, 830, 850nm</td></tr>
+          <tr><td class="lb">Irradiance Output</td><td>85 mW/cm²</td><td class="h"><strong>150 mW/cm²</strong></td><td>155 mW/cm²</td><td>189 mW/cm²</td></tr>
+          <tr><td class="lb">Total Wattage</td><td>150W</td><td class="h"><strong>300W</strong></td><td>600W</td><td>1,200W</td></tr>
+          <tr><td class="lb">Panel Dimensions (W×H)</td><td>18" × 12"</td><td class="h"><strong>36" × 12"</strong></td><td>48" × 12"</td><td>72" × 16"</td></tr>
+          <tr><td class="lb">LED Lifespan</td><td>30,000 hrs</td><td class="h"><strong>50,000 hrs</strong></td><td>50,000 hrs</td><td>50,000 hrs</td></tr>
+          <tr><td class="lb">7" Touchscreen Control Panel™</td><td>—</td><td class="h"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lb">Independent Wavelength Control System™</td><td>—</td><td class="h"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lb">Pre-Loaded Clinical Protocols</td><td>3</td><td class="h"><strong>12</strong></td><td>12</td><td>20</td></tr>
+          <tr><td class="lb">Advanced Pulsing Mode System™</td><td>—</td><td class="h"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lb">Bluetooth + Wi-Fi App Integration</td><td>—</td><td class="h"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lb">Zero EMF Operation System™</td><td>—</td><td class="h"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lb">Flicker-Free LED System™</td><td>—</td><td class="h"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lb">Silent Operation System™</td><td>—</td><td class="h"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lb">Auto-Shutoff Safety System™</td><td>—</td><td class="h"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lb">Motorized Stand Included</td><td>—</td><td class="h"><strong>FREE ($399 Value)</strong></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td class="lb">Custom Preset Slots</td><td>—</td><td class="h"><strong>4 Presets</strong></td><td>4 Presets</td><td>8 Presets</td></tr>
+          <tr><td class="lb">Operating Voltage</td><td>120V / 15A</td><td class="h"><strong>120V / 20A</strong></td><td>120V / 20A</td><td>220V / 30A</td></tr>
+          <tr><td class="lb">Weight</td><td>14 lbs.</td><td class="h"><strong>24 lbs.</strong></td><td>36 lbs.</td><td>68 lbs.</td></tr>
+          <tr><td class="lb">Model #</td><td>luma200</td><td class="h"><strong>lumapro4</strong></td><td>lumapro6</td><td>lumaultra</td></tr>
+          <tr><td class="lb">Warranty</td><td>1 Year</td><td class="h"><strong>3 Years Commercial</strong></td><td>3 Years Commercial</td><td>5 Years Commercial</td></tr>
+          <tr class="cr-row"><td></td><td><a href="#" class="tb">Buy Now</a></td><td class="h"><a href="#" class="tb h">Buy Now</a></td><td><a href="#" class="tb">Buy Now</a></td><td><a href="#" class="tb">Buy Now</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE: THE INDUSTRY'S FIRST FULL-BODY COMMERCIAL SYSTEM -->
+
+  <div class="fs">
+  <div class="fi">
+    <img src="https://i.ibb.co.com/vfXhKBc/images.jpg" alt="Full-Body Commercial System" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+  </div>
+  
+  <div class="ft">
+    <span class="ft-tag">Full-Body Commercial Coverage</span>
+    <h2>The Industry's First Full-Body Commercial Red Light System for Your Business</h2>
+    <p>The wellness revolution has transformed how clinics, med-spas, and performance centers serve their clients. The LumaTherapy Pro™ 4 lets you offer the most advanced red light therapy available — right in your facility. With a full 36" treatment panel, 400 clinical-grade LEDs, and five therapeutic wavelengths, it delivers whole-body front or back coverage in a single 10-minute session.</p>
+    <p>Red light therapy is the perfect non-invasive modality for muscle recovery, skin rejuvenation, chronic pain relief, improved sleep quality, and cellular energy optimization. Clients come in for one benefit and discover a dozen more. Within just a few sessions, they feel and see the difference — and keep coming back.</p>
+    <ul class="cl">
+      <li>Full-body anterior or posterior coverage in one 10-minute session</li>
+      <li>Five simultaneous therapeutic wavelengths — no single-spectrum compromises</li>
+      <li>12 pre-loaded clinical protocols for every client wellness goal</li>
+      <li>Ideal for med-spas, PT clinics, sports centers, and wellness hotels</li>
+      <li>Clients report visible results within 4–8 weeks of consistent use</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FEATURE: FIVE WAVELENGTH TECHNOLOGY (flipped) -->
+
+<div class="fs flip" style="background-image: linear-gradient(rgba(250, 248, 245, 0.8), rgba(250, 248, 245, 0.8)), url('YOUR_BG_IMAGE_URL.jpg'); background-size: cover; background-position: center; border-top: 1px solid var(--bd); border-bottom: 1px solid var(--bd)">
+  
+  <div class="fi fi-dk" style="background: none; border: none;"> 
+    <img src="https://i.ibb.co.com/Q3nndngM/unnamed-15.jpg" alt="Technology Display" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+  </div>
+
+  <div class="ft">
+    <span class="ft-tag">Five-Wavelength Therapy System</span>
+    <h2>The Industry's Most Advanced Five-Wavelength Therapy Technology</h2>
+    <p>The LumaTherapy Pro™ 4's five-wavelength system represents a revolution in commercial red light therapy technology...</p>
+    
+    <h4>Why Each Wavelength Matters:</h4>
+    <ul class="cl">
+      <li><strong>630nm</strong> — Surface skin rejuvenation, collagen synthesis</li>
+      <li><strong>660nm</strong> — Primary mitochondrial activator, ATP energy surge</li>
+      <li><strong>810nm</strong> — Neural recovery and deep joint relief</li>
+      <li><strong>830nm</strong> — Anti-inflammatory, chronic pain relief</li>
+      <li><strong>850nm</strong> — Deepest penetration: muscle, bone, and tissue</li>
+    </ul>
+  </div>
+</div>
+ 
+
+<!-- COMPARISON STRIP -->
+
+<div class="comp-strip">
+  <div class="comp-in">
+    <div class="comp-v" style="padding: 0; overflow: hidden; background: none; border: 1px solid var(--bd);">
+      <img src="https://i.ibb.co.com/NdgwGTW1/unnamed-16.jpg" alt="Comparison Chart" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+    
+    <div class="comp-t">
+      <h3>Why Other Panels Can't Compete</h3>
+      <p>Most commercial red light panels deliver only 1–2 wavelengths at consumer-grade power levels — never reaching the clinical therapeutic dose that produces the results your clients expect. This leads to slower outcomes, lower client satisfaction, and reduced retention for your business.</p>
+      <p>The LumaTherapy Pro™ 4 is independently lab-verified to deliver 150 mW/cm² across five therapeutic wavelengths simultaneously — the exact clinical benchmark identified in peer-reviewed photobiomodulation research. It outperforms every panel in its class and achieves the therapeutic threshold that no single-wavelength device can approach.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- THE LUMATHERAPY STORY -->
+
+<div class="story">
+  <div class="st-in">
+    <div class="st-tx">
+      <h2>The <em>LumaTherapy</em> Story</h2>
+      <p>Although there are many red light therapy on the market, most made made companies that never consulted single cigal clinical clinical researcher. After studying shocking what was avocking gap: wee dinserailly med-spas and conid to devices sold to fractices sold to therapuics were delivapuic dosed in peer-reïwed research they claimed it be based on.</p>
+      <p>Because red light therapy has powerful, dounmated health benefits, we decided to work the directly with directly with photobiologiy researchershers to to trnical potential. We paruly unlock: of delivering hesucale health outcomes for every client.</p>
+      <p>After red light thelopment has velihopont panel decided company to work eelits the specialiss in photobinodulation, sporïsmadatioy and dermatology who shared our goal selivving real deliveing real, measurable outcomes for every client. launched : LumaTherapy Pro™ Series, We LumaTherapy Pro™ Series — we built someins performance — we laused by med-spas, physical therapy clinics — we trusted it is trusted fote. Today it is wellness industry naver naver seen and luxury wellness hotels across aross country.</p>
+    </div>
+    <div class="st-img">
+      <img src="https://i.ibb.co.com/JwQWPPmn/unnamed-17.jpg" alt="Brand Story Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; position: relative; z-index: 2;">
+    </div>
+  </div>
+</div>
+
+
+<!-- BREAKTHROUGH FEATURES -->
+<div class="bt-wrap">
+  <div class="sec-hd">
+    <div class="sec-tag">Breakthrough Features</div>
+    <h2 class="sec-ttl">Medical Breakthrough Discovery</h2>
+    <p class="sec-sub">When the full potential of red light therapy is reached, the results are life-changing. That's why we spent years engineering every feature of the LumaTherapy Pro™ 4 with a specific, documented clinical purpose.</p>
+  </div>
+  <div class="bt-grid">
+    <div class="btc"><div class="bti">📚</div><h4>Based on Documented Research</h4></div>
+    <div class="btc"><div class="bti">🩺</div><h4>Clinician Recommended</h4></div>
+    <div class="btc"><div class="bti">🌡️</div><h4>Precision Session Control</h4></div>
+    <div class="btc"><div class="bti">⚡</div><h4>Life-Changing Benefits</h4></div>
+    <div class="btc"><div class="bti">🧘</div><h4>The Wellness Routine™</h4></div>
+    <div class="btc"><div class="bti">🔧</div><h4>Easy to Install</h4></div>
+  </div>
+</div>
+
+<!-- FULL SPECTRUM TECH SECTIONS -->
+<div class="tech">
+  <h2>Five-Wavelength Therapy Technology</h2>
+  <p>The LumaTherapy Pro™ 4's five-wavelength output represents the most significant advancement in commercial red light therapy available. Most competing panels only emit wavelengths near one end of the spectrum — dramatically limiting the therapeutic benefits from every session. Our system delivers the complete photobiomodulation spectrum simultaneously, with each wavelength independently controllable for targeted protocol delivery.</p>
+  <p>A full five-wavelength system is critical because each wavelength penetrates tissue at a unique depth and activates distinct biological responses. Near-infrared wavelengths above 800nm access the deep tissue targets — muscles, joints, bone — that red wavelengths simply cannot reach. Combined in one clinical-grade device, the LumaTherapy Pro™ 4 delivers what previously required multiple specialized devices, multiple sessions, and significantly higher investment.</p>
+
+ 
+  <h3>Protective LED Housing System™</h3>
+<p>At LumaTherapy Systems we designed every detail with commercial operators in mind — including safety, durability, and long-term performance. Many panel manufacturers use minimal LED protection, leading to premature diode degradation and inconsistent output in high-traffic commercial environments.</p>
+<p>With commercial durability as our top priority, LumaTherapy Pro™ LED housings are constructed from aircraft-grade 6061 aluminum — engineered to dissipate heat efficiently, protect the full LED array, and maintain consistent 150 mW/cm² output for the panel's complete 50,000-hour lifespan.</p>
+
+<div class="ph" style="background: none; border: 1px solid var(--bd); padding: 0; overflow: hidden; height: 250px;">
+    <img src="https://i.ibb.co.com/d4wwPnMC/unnamed-18.jpg" alt="LED Housing Detail" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+</div>
+
+  <h3>Motorized Height-Adjustable Commercial Stand Included</h3>
+<p>Most commercial panel manufacturers charge separately for stands — and the companies that include them provide basic, fixed-height options with limited flexibility. We believe premium commercial equipment demands premium support. Every LumaTherapy Pro™ 4 ships with a motorized height-adjustable stand at no additional cost. It adjusts from 24" to 72" with a single button press, supports both vertical and horizontal panel orientations, and is built from aircraft-grade aluminum rated for 10,000+ commercial sessions.</p>
+<p>This stand is perfect for standing full-body sessions, seated targeted treatment, or prone reclined protocols — giving your practitioners complete flexibility to customize every client's session. No tools required. Fully operational within 15 minutes of delivery.</p>
+
+<div class="ph" style="background: none; border: 1px solid var(--bd); padding: 0; overflow: hidden; height: 280px; display: flex; align-items: center; justify-content: center; border-radius: 6px;">
+    <img src="https://i.ibb.co.com/1YLvpHMW/unnamed-19.jpg" alt="Motorized Height-Adjustable Stand" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+</div>
+
+  <h3>Durable Aircraft-Grade Aluminum Construction</h3>
+  <p>A persistent problem with commercial therapy panels is output consistency over time. Panels that perform well initially often degrade with heavy commercial use — LEDs lose intensity, thermal management fails, and your clients stop getting the clinical dose they expect. This is one of the most costly problems for commercial operators because you've built protocols, priced services, and set client expectations around a level of performance the device can no longer deliver.</p>
+  <p>Because we designed the LumaTherapy Pro™ 4 from scratch, we engineered our thermal management system to maintain consistent output throughout the panel's full commercial lifespan. Aircraft-grade aluminum construction ensures thermal stability even during back-to-back commercial sessions — so your 50th session of the day delivers the same verified 150 mW/cm² as your first.</p>
+</div>
+
+<!-- BASED ON DOCUMENTED RESEARCH (image + text) -->
+
+<div class="fs" style="border-top:1px solid var(--bd);padding-top:60px">
+  <div class="fi" style="background:var(--ow); overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid var(--bd); border-radius: 8px;">
+    <img src="https://i.ibb.co.com/Cp2BBgRh/unnamed-20.jpg" alt="Documented Research Graphic" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+  </div>
+  
+  <div class="ft">
+    <span class="ft-tag">Science-Backed Performance</span>
+    <h2>Based on Documented Research</h2>
+    <p>LumaTherapy Pro™ panels are specified purely on documented clinical studies. While many competitors make claims without scientific backing — or cite poorly designed research — we only engineer the parameters validated in peer-reviewed photobiomodulation literature. This matters because your professional reputation and your clients' outcomes depend on the most reliable, evidence-based technology available.</p>
+    <p>We are extremely careful about every specification we put our name on. Because every performance claim we make is backed by independent lab testing and clinical literature, you can build your commercial therapy program on the LumaTherapy Pro™ 4 with complete confidence. Improving your clients' health and growing your practice is our top priority.</p>
+  </div>
+</div>
+
+<!-- ZERO COMPROMISES -->
+
+<div class="zero">
+  <div class="zero-in">
+    <div class="zt">
+      <h2>Zero Compromises</h2>
+      <p>LumaTherapy Pro™ panels are designed, engineered, and quality-controlled in the USA, shipped directly from our California facility. We work with photobiology researchers, sports medicine specialists, and clinical practitioners who share our singular commitment: real, measurable health outcomes for every client your practice serves.</p>
+      <p>We accept nothing less than clinical-grade performance — so we maintain full control over every component from design through delivery. No cost-cutting on LED quality. No shortcuts on wavelength calibration. No accepting "close enough" on irradiance output. You can purchase the LumaTherapy Pro™ 4 with complete confidence, knowing you're getting an unmatched commercial therapy system independently verified to deliver on every clinical specification we claim.</p>
+    </div>
+    
+    <div class="zv" style="padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid var(--bd); border-radius: 8px; height: 350px;">
+      <img src="https://i.ibb.co.com/qMLcGd6T/unnamed-21.jpg" alt="Made in USA Quality Control" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+  </div>
+</div>
+
+<!-- RAPID HEALING + COMPARISON -->
+
+  <div class="tech" style="padding-top:0">
+  <h2>Rapid Deep-Tissue Penetration System™</h2>
+  <p>A critical performance requirement for any commercial red light therapy system is consistent deep-tissue penetration — the ability to reliably deliver therapeutic light energy to the cellular targets that produce clinically meaningful results. Most panels, as shown in our clinical comparison, deliver light only to the superficial skin layers — never reaching the muscle, joint, and cellular targets where the most significant therapeutic responses occur.</p>
+  <p>That's why we built the LumaTherapy Pro™ 4 with our Rapid Deep-Tissue Penetration System™. By combining five therapeutic wavelengths at 150 mW/cm², we simultaneously deliver light energy from the skin surface at 0.5mm all the way through to deep muscle, bone, and neural tissue at 8–10cm depth — activating therapeutic responses at every depth that research has identified as clinically significant.</p>
+  
+  <div class="ph" style="background: none; border: 1px solid var(--bd); padding: 0; overflow: hidden; height: 300px; border-radius: 8px;">
+    <img src="https://i.ibb.co.com/j950zM91/unnamed-22.jpg" alt="Tissue penetration depth comparison diagram" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #fff;">
+  </div>
+</div>
+
+  <h3>Benefits of the Rapid Deep-Tissue Penetration System™</h3>
+  <p>The LumaTherapy Pro™ 4's multi-depth penetration system enables a single 10-minute session to simultaneously address multiple therapeutic goals. Recovery clients benefit from deep muscle repair at 850nm while simultaneously receiving surface skin stimulation at 630nm. Sleep and wellness clients receive neural and systemic anti-inflammatory effects at 810nm while the skin ages backwards with 660nm. Each wavelength's unique biological pathway compounds with the others — producing synergistic effects that no single-wavelength system can replicate.</p>
+  <p>By using the LumaTherapy Pro™ 4 consistently, your clients will experience compounding benefits that build every session. The Rapid Deep-Tissue Penetration System™ meets the full spectrum of commercial therapy needs — from high-performance athletic recovery to luxury anti-aging to chronic pain management — in a single device your entire practice can rely on.</p>
+
+  <h3>Hot/Cold Complement System™</h3>
+  <p>The LumaTherapy Pro™ 4 is engineered to integrate seamlessly into hot/cold therapy circuits — one of the most powerful modality combinations in modern performance wellness. Delivering the red and near-infrared priming dose before cold exposure amplifies cellular recovery signals. Using the LumaTherapy Pro™ 4 as a warm-down tool after cryotherapy restores circulation and reduces post-treatment inflammation. Our pre-loaded clinical protocols include dedicated hot/cold complement sequences your practitioners can deploy from day one.</p>
+</div>
+
+<!-- STATS BAND -->
+<div class="stats">
+  <div class="stats-in">
+    <div class="scard"><div class="snum">89%</div><div class="slbl">of users report reduced muscle soreness within 5 sessions</div></div>
+    <div class="scard"><div class="snum">94%</div><div class="slbl">report visible skin improvements after 4 weeks of daily use</div></div>
+    <div class="scard"><div class="snum">3×</div><div class="slbl">more cellular ATP energy production vs. single-wavelength panels</div></div>
+    <div class="scard"><div class="snum">50K+</div><div class="slbl">hour LED lifespan — 10+ years of daily commercial operation</div></div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div class="rev-sec" id="reviews">
+  <div class="sec-hd">
+    <div class="sec-tag">Verified Reviews</div>
+    <h2 class="sec-ttl">What Our Customers Are Saying</h2>
+  </div>
+  <div class="rev-top">
+    <div>
+      <div class="ag-num">4.9</div>
+      <div class="ag-stars">★★★★★</div>
+      <div class="ag-cnt">Based on 487 verified reviews</div>
+    </div>
+    <div>
+      <div class="br"><div class="br-l">5 ★</div><div class="br-bg"><div class="br-f" style="width:91%"></div></div><div class="br-p">91%</div></div>
+      <div class="br"><div class="br-l">4 ★</div><div class="br-bg"><div class="br-f" style="width:6%"></div></div><div class="br-p">6%</div></div>
+      <div class="br"><div class="br-l">3 ★</div><div class="br-bg"><div class="br-f" style="width:2%"></div></div><div class="br-p">2%</div></div>
+      <div class="br"><div class="br-l">2 ★</div><div class="br-bg"><div class="br-f" style="width:1%"></div></div><div class="br-p">1%</div></div>
+      <div class="br"><div class="br-l">1 ★</div><div class="br-bg"><div class="br-f" style="width:0%"></div></div><div class="br-p">0%</div></div>
+    </div>
+  </div>
+  <div class="rg">
+    <div class="rc">
+      <div class="rch"><div><div class="rn">Dr. Sarah M.</div><div class="rd">January 14, 2026</div><div class="rv">✓ Verified Commercial Purchase</div></div><div class="rs">★★★★★</div></div>
+      <div class="rt">"The gold standard in our clinic — absolutely transformative."</div>
+      <div class="rb">We tested four commercial red light panels over three years before finding the LumaTherapy Pro™ 4. It is the first panel our entire clinical team unanimously endorses. The five-wavelength output and independent controls let us run completely customized protocols for every patient. Post-surgical recovery clients are seeing measurably faster results. The build quality is exceptional. Worth every dollar.</div>
+    </div>
+    <div class="rc">
+      <div class="rch"><div><div class="rn">Marcus T. — Med-Spa Owner</div><div class="rd">December 28, 2025</div><div class="rv">✓ Verified Commercial Purchase</div></div><div class="rs">★★★★★</div></div>
+      <div class="rt">"Our single most booked service in six months."</div>
+      <div class="rb">We added the LumaTherapy Pro™ 4 to our med-spa six months ago and it has completely transformed our service menu. It is now our most booked treatment by a significant margin. Clients come in for skin rejuvenation and end up on monthly recovery and sleep packages too. The clinical protocols built into the touchscreen make our team look incredibly professional without extensive training. Remarkable product.</div>
+    </div>
+    <div class="rc">
+      <div class="rch"><div><div class="rn">Jennifer A. — Physical Therapist</div><div class="rd">November 5, 2025</div><div class="rv">✓ Verified Commercial Purchase</div></div><div class="rs">★★★★★</div></div>
+      <div class="rt">"Chronic pain results we couldn't achieve any other way."</div>
+      <div class="rb">I purchased the LumaTherapy Pro™ 4 for my physical therapy practice and used it on myself first. Three months later, the relief in my lower back is genuinely life-changing. My patients with chronic lumbar pain, post-injury inflammation, and post-surgical recovery are all reporting results we couldn't achieve with our previous modalities. The 850nm deep penetration is in a class of its own. Five stars without hesitation.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq">
+  <div class="sec-hd">
+    <div class="sec-tag">Common Questions</div>
+    <h2 class="sec-ttl">Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-i">
+    <div class="faq-q">How long does each LumaTherapy Pro™ 4 session take?</div>
+    <div class="faq-a">For full-body treatment at the recommended 10–12 inches, most clinical protocols call for 10–20 minutes per side (front and back) for a comprehensive full-body session. Targeted area sessions can be as short as 5–10 minutes. The LumaTherapy Pro™ 4 includes 12 pre-loaded clinical protocols with optimized session timing built in — so your practitioners never have to guess. Simply select the protocol on the touchscreen and the system manages the rest.</div>
+  </div>
+  <div class="faq-i">
+    <div class="faq-q">Is red light therapy safe? Are there any side effects?</div>
+    <div class="faq-a">Red light therapy at the wavelengths used in the LumaTherapy Pro™ 4 (630–850nm) has an excellent safety profile established across hundreds of clinical trials. There is no UV light emitted — zero risk of sunburn, UV damage, or DNA alteration. The most commonly reported experience by first-time users is a pleasant mild warmth and a noticeable energy boost in hours following the session. We always recommend consulting with a healthcare provider before beginning any new wellness protocol, particularly if you are pregnant, take photosensitizing medications, or have a history of light-sensitive skin conditions. Call us at (800) 800-1234 with any clinical questions.</div>
+  </div>
+  <div class="faq-i">
+    <div class="faq-q">What is the difference between red light (660nm) and near-infrared (850nm)?</div>
+    <div class="faq-a">Red light (630–700nm) is visible to the eye and penetrates primarily the skin's surface layers — making it the gold standard for skin rejuvenation, collagen stimulation, and wound healing. Near-infrared light (700–1100nm) is invisible to the naked eye and penetrates significantly deeper — reaching muscles, joints, bones, and neural tissue. The LumaTherapy Pro™ 4 delivers all five therapeutic wavelengths simultaneously, addressing both surface skin and deep tissue goals in a single 10-minute session — something no single-wavelength device can achieve.</div>
+  </div>
+  <div class="faq-i">
+    <div class="faq-q">How is the LumaTherapy Pro™ 4 different from cheaper commercial panels?</div>
+    <div class="faq-a">The differences are substantial: irradiance output (actual light energy at treatment distance), wavelength range and accuracy, build durability for commercial use, and feature set. Budget panels frequently advertise high wattage but deliver a fraction of that as usable therapeutic light. The LumaTherapy Pro™ 4 is independently third-party lab-tested to deliver a verified 150 mW/cm² — the clinical dose threshold documented in photobiomodulation research. It delivers five independently controlled wavelengths, a 7-inch commercial touchscreen with 12 clinical protocols, advanced pulsing modes, app integration, a motorized stand, and a 3-year commercial warranty — none of which are available at this price in any competing commercial panel.</div>
+  </div>
+  <div class="faq-i">
+    <div class="faq-q">Does the LumaTherapy Pro™ 4 require special electrical wiring?</div>
+    <div class="faq-a">The LumaTherapy Pro™ 4 operates on standard 120V power and requires a dedicated 20-amp circuit. Most commercial buildings already have 20-amp circuits available. If your facility only has 15-amp circuits, a licensed electrician can quickly install a dedicated 20-amp line. We recommend confirming your electrical capacity before purchase. Our team is available at (800) 800-1234, 7 days a week, to walk you through the requirements for your specific facility at no charge.</div>
+  </div>
+  <div class="faq-i">
+    <div class="faq-q">What is covered under the 3-Year Commercial Warranty?</div>
+    <div class="faq-a">The LumaTherapy Pro™ 4 comes with a 3-Year Commercial Warranty covering manufacturing defects, LED panel failure, touchscreen malfunctions, control system issues, and structural problems — all at zero additional cost. This is three times the warranty offered by most competitors, and it reflects our confidence in the long-term durability and output consistency of every unit we ship. The motorized stand carries a 1-year mechanical warranty. For all warranty service, contact our team at (800) 900-1234, available 7 days a week.</div>
+  </div>
+  <div class="faq-i">
+    <div class="faq-q">How soon will clients see results?</div>
+    <div class="faq-a">Results vary by condition and individual. Many users report increased energy and reduced muscle soreness within the first 1–3 sessions. Visible skin improvements — improved tone, smoother texture, reduced fine lines — typically begin appearing within 4–8 weeks of consistent daily use. Chronic pain relief and deep-tissue benefits become more pronounced over 4–12 weeks of regular treatment. Red light therapy benefits are cumulative and compound with consistent use — which is why clients who commit to a protocol always see the most dramatic results. We recommend daily sessions of 10–20 minutes for best outcomes.</div>
+  </div>
+  <div class="faq-i">
+    <div class="faq-q">Is financing available for the LumaTherapy Pro™ 4?</div>
+    <div class="faq-a">Yes — we offer 0% APR financing for qualified commercial buyers. Apply in 30 seconds at checkout and receive an instant decision. Monthly payment amounts depend on the term selected. For multi-unit orders (3+ panels) or multi-location practice deployments, call us at (800) 800-1234 to discuss dedicated commercial financing terms and wholesale pricing. We work with practices of all sizes and are happy to structure a payment arrangement that works for your business.</div>
+  </div>
+</div>
+
+<!-- FOOTER CTA -->
+<div class="fcta">
+  <h2>Ready to Elevate Your <em>Clinic or Practice?</em></h2>
+  <p class="fp">Join hundreds of med-spas, physical therapy clinics, and performance centers that trust the LumaTherapy Pro™ 4. Order today — ships within 3–5 business days with a free motorized commercial stand.</p>
+  <div class="fcta-btns">
+    <button class="fcta-p">🛒 Order Now — Save 42%</button>
+    <button class="fcta-s">📞 Talk to a Specialist</button>
+  </div>
+  <div class="fcta-fine">Free shipping &nbsp;·&nbsp; 3-Year commercial warranty &nbsp;·&nbsp; 60-day returns &nbsp;·&nbsp; 0% APR financing available</div>
+</div>
+
+<!-- SITE FOOTER -->
+<footer class="sfoot">
+  <div class="sf-logo">RedLight<em>Systems™</em></div>
+  <div class="sf-lks">
+    <a href="#">Shipping Policy</a><a href="#">Return Policy</a><a href="#">Warranty</a><a href="#">Clinical Research</a><a href="#">Our Story</a><a href="#">Contact Us</a><a href="#">Privacy Policy</a>
+  </div>
+  <div class="sf-c">© 2026 RedLight Systems™. All rights reserved.</div>
+</footer>
+
+<!-- COUNTDOWN TIMER -->
+<script>
+(function(){
+  var K='rlt_deadline';var t=null;
+  try{var s=localStorage.getItem(K);if(s)t=new Date(s)}catch(e){}
+  if(!t||isNaN(t.getTime())){
+    t=new Date();t.setDate(t.getDate()+2);t.setHours(t.getHours()+14);t.setMinutes(t.getMinutes()+37);
+    try{localStorage.setItem(K,t.toISOString())}catch(e){}
+  }
+  function p(n){return String(n).padStart(2,'0')}
+  function tick(){
+    var diff=Math.max(0,t-new Date());
+    var dd=document.getElementById('d');var dh=document.getElementById('h');var dm=document.getElementById('m');var ds=document.getElementById('s');
+    if(dd)dd.textContent=p(Math.floor(diff/86400000));
+    if(dh)dh.textContent=p(Math.floor((diff%86400000)/3600000));
+    if(dm)dm.textContent=p(Math.floor((diff%3600000)/60000));
+    if(ds)ds.textContent=p(Math.floor((diff%60000)/1000));
+  }
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
